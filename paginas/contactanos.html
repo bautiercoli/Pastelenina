@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El mejor emprendimiento de pasteleria, con las mejores tortas lo encontras aca!">
+    <meta name="keywords" content="pastelenina,pasteleria,alfajores,macarons,comida,galletitas,tortas,brownies">
+    <title>La pastelenina | contactanos</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/pagina.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uchen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Uchen&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="fondo">
+    <header class="header">
+        <section>
+            <nav id="background" class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="../index.html"><img id="logoHeader" src="../imagenes/logo.png" alt="Logo"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="productos.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="../index.html">Combos</a></li>
+                          <li><a class="dropdown-item" href="productos.html">Mas vendidos</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="productos.html">Otros productos</a></li>
+                        </ul>
+                      <li class="nav-item">
+                        <a class="nav-link" href="preguntasfrecuentes.html">Preguntas frecuentes</a>
+                      </li>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="sobrenosotros.html">Quienes somos?</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contactanos.html">contactanos</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        </section>
+        <hr class="hr">
+    </header>
+    <section>
+        <p class="respuestas">Llena este pequeño formulario y haznos saber tu pregunta, la respuesta te estara llegando
+            al mail en un periodo de 24 a 72 hs.</p>
+    </section>
+    <section class="padreFlex">
+        <form action="procesar.php" method="get" enctype="" id="formularioUnico">
+            <input type="text" name="Nombre" placeholder="Ingresa tu nombre">
+            <input type="text" name="apellido" placeholder="Ingresa tu apellido">
+            <input type="text" name="edad" placeholder="Ingresa tu fecha de nacimiento">
+            <input type="number" name="Dni" placeholder="Ingresa tu DNI">
+            <input type="tel" name="numero" placeholder="Ingresa tu numero de telefono">
+            <input type="email" name="email" placeholder="Ingresa tu email">
+            <textarea name="Consulta" cols="45" rows="15" placeholder="Ingresa tu consulta"></textarea>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </section>
+  <hr class="hr">
+  <footer class="footer">
+    <section>
+        <p class="footer__letra">Si tienes sugerencias o comentarios, no dudes en contactarnos:</p>
+        <!--Esta imagen es el boceto del logo, pero todavia no pude disañarla/conseguirla, pero hice esta rapido-->
+        <img class="footer__logo" src="../imagenes/logo.png"
+            alt="logo de la pagina">
+        <address  class="footer__letra footer__flex">xxxxxxxxxxxxxxxxxxxxxxx@gmail.com</address>
+        <p  class="footer__letra footer__flex">redes sociales</p> <p  class="footer__letra">© Derechos reservados 2021</p>
+    </section>
+</footer>
+    <script src="..js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

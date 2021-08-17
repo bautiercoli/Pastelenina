@@ -1,0 +1,307 @@
+* {
+    margin: 0; padding: 0; 
+}
+$margin-left: 100px;
+$margin-right: 100px;
+$margin-bottom: 100px;
+$margin-top: 100px;
+.fondo {
+    background-image: linear-gradient(rgb(253, 213, 220),rgb(243, 146, 146)); 
+}
+.header {
+    background: rgb(212, 96, 96);
+}
+header{
+    font-size: 20px;
+    font-family:  'Oswald', sans-serif;
+}
+.preguntas {
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 20px;
+}
+.respuestas {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 30px;
+}
+.titulos {
+    font-size: 35px;
+    font-family:  'Oswald', sans-serif;
+    margin-left: 25px;
+    border-top:solid 3px black;
+    border-left:solid 3px black;
+    border-right:solid 3px black;
+    border-bottom:solid 3px black;
+    margin-right: 25px;
+}
+#comboUnico {
+    font-size: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+#imagenPrincipal {
+    border-radius: 5%;
+    width: 350px;
+}
+hr {
+    background-color: black!important;
+    border-color: rgb(0, 0, 0)!important;
+    height: 1px!important;
+    margin: 0!important;
+    color: black!important;
+    opacity: 1!important;
+}
+#titulo {
+    margin-top: 10px;
+}
+#formularioUnico {
+    display: flex;
+    flex-direction: column;
+height: 450px;
+flex-basis: 500px;
+    justify-content: space-between;
+}
+.padreFlex {
+    display: flex;
+    justify-content: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+.botones {
+    background-color: pink;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    border-radius: 10%;
+}
+.marcadores {
+    text-decoration: none;
+}
+.imagenes {
+    width: 300px;
+    margin-left: 30px;
+}
+.submenu{
+    background-color: rgb(230, 111, 111);
+    width: 100%;
+    border: solid 5px rgb(206, 111, 127);
+}
+ul ul {
+    position: absolute;
+    display: none;
+}
+ul {
+    list-style: none;
+}
+ul ul {
+    list-style-type: circle;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+li {
+    display: inline-block;
+    width: 135px;
+    position: relative;
+    text-decoration: none;
+}
+ul li:hover ul{
+    display: block;
+}
+#otros{
+    display: flex;
+    justify-content: center;
+}
+.liProductos{
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 300px 300px; 
+    grid-template-areas:
+    "prodA prodB prodC"
+    "prodD prodE prodF"
+}
+#prodA{
+    grid-area: prodA;
+}
+#prodB{
+    grid-area: prodB;
+}
+#prodC{
+    grid-area: prodC;
+}
+#prodD{
+    grid-area: prodD;
+}
+#prodE{
+    grid-area: prodE;
+}
+#prodF{
+    grid-area: prodF;
+}
+#gridNosotros {
+    display: grid;
+    grid-template-columns: 20% 40%;
+    grid-template-rows: 150px 400px 150px;
+    grid-template-areas:
+    "quienesSomos quienesSomos"
+    "foto   queHacemos"
+    "cuando  cuando"
+}
+#quienesSomos {
+    grid-area: quienesSomos;
+}
+#foto {
+    grid-area: foto;
+}
+#queHacemos {
+    grid-area: queHacemos;
+}
+#cuando{
+grid-area: cuando;
+}
+#background{
+    background-color: rgb(212, 96, 96);
+}
+.slider {
+    width: 1000px;
+    height: 500px;
+}
+.animacionImg:hover{
+    transform: scale(2,1);
+    margin-left: 130px;
+}
+.carousel-control-prev {
+    margin-left: 400px;
+}
+.carousel-control-prev,  .carousel-control-next {
+    margin-right: 400px!important; 
+    width: 10%!important;
+}
+
+input, textarea{
+    margin-top: 15px;
+}
+.btn-outline-success {
+    color: #000000!important;
+    border-color: #000000!important;
+}
+
+.combos{
+    margin-left: $margin-left/10;
+}
+.combos__titulos{
+    font-size: 35px;
+    font-family:  'Oswald', sans-serif;
+    margin-left: 30px;
+    border-top:solid 2px black;
+    border-left:solid 2px black;
+    border-right:solid 2px black;
+    border-bottom:solid 2px black;
+    margin-right: 30px;
+}
+.footer{
+    background: rgb(212, 96, 96);
+    width: 100%;
+    position: absolute;
+}
+.footer__letra{
+    font-family:  'Oswald', sans-serif;
+    margin-left: $margin-left/5;
+}
+.footer__logo {
+    margin-left: $margin-left/5;
+    height: 180px;
+}
+.footer__flex {
+    display: flex;
+flex-direction: row-reverse;
+justify-content: end;
+margin-right: $margin-right/10;
+}
+.carousel{
+    margin-top: 70px;
+}
+.carousel__top{
+display: flex!important;
+justify-content: center!important;
+width: 100%!important;
+align-items: center!important;
+}
+.sectionProductos{
+    margin-bottom: $margin-bottom/5;
+}
+.section__preguntas {
+    font-size: 32px;
+    font-family: 'Roboto Mono', monospace;
+    margin-left: $margin-left/5;
+}
+.section__respuestas {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 30px;
+}
+.section__principal {
+    margin-left: $margin-left/5!important;
+    font-size: 40px !important;
+    display: flex;
+    justify-content: center;
+}
+#logoHeader{
+    width: 200px;
+}
+@media screen and (min-width:1025px) {
+    .compu{
+        background-color: rgb(253, 191, 201);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px)
+{
+    .tablet { 
+        background-color: rgb(251, 150, 168);
+    }
+}
+@media screen and (max-width: 767px) {
+    .celu{
+        background-color: rgb(253, 191, 201);
+    }
+    .right.carousel-control, .left.carousel-control {
+        display: none;
+    }   
+    .carousel-control-next, .carousel-control-prev, .carousel-control-prev-icon {
+        display: none;
+    }
+    .liProductos {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #gridNosotros {
+        margin-right: 30px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 400px 400px 400px 500px;
+        grid-template-areas:
+        "quienesSomos"
+        "queHacemos"
+        "foto"
+        "cuando"
+    }
+    .padreFlex {
+        display: flex;
+        
+    }
+}
+
+
