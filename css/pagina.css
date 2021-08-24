@@ -146,11 +146,12 @@ ul li:hover ul {
 }
 
 .liProductos {
+  justify-content: center;
   margin-left: 50px;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-template-rows: 300px 300px;
-  grid-template-areas: "prodA prodB prodC" "prodD prodE prodF";
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 350px 350px;
+  grid-template-areas: "prodA prodB    prodC" "prodD prodE    prodF";
 }
 
 #prodA {
@@ -175,6 +176,11 @@ ul li:hover ul {
 
 #prodF {
   grid-area: prodF;
+}
+
+.imagenesProductos {
+  width: 400px;
+  height: 250px;
 }
 
 #gridNosotros {
@@ -204,9 +210,14 @@ ul li:hover ul {
   background-color: #d46060;
 }
 
+.imagenesSlider {
+  width: 100%;
+  height: 100%;
+}
+
 .slider {
   width: 1000px;
-  height: 500px;
+  height: 630px;
 }
 
 .animacionImg:hover {
