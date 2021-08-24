@@ -146,7 +146,7 @@ ul li:hover ul {
 }
 
 .liProductos {
-  justify-content: center;
+  justify-content: space-between;
   margin-left: 50px;
   display: grid;
   grid-template-columns: 30% 30% 30%;
@@ -229,9 +229,13 @@ ul li:hover ul {
   margin-left: 400px;
 }
 
-.carousel-control-prev, .carousel-control-next {
-  margin-right: 400px !important;
+.carousel-control-next {
+  margin-right: 300px !important;
   width: 10% !important;
+}
+
+.carousel-control-prev {
+  margin-left: 250px !important;
 }
 
 input, textarea {
