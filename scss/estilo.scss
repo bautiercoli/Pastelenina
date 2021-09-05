@@ -199,7 +199,7 @@ grid-area: cuando;
     width: 10%!important;
 }
 .carousel-control-prev{
-    margin-left: 250px!important;
+    margin-left: !important;
 }
 input, textarea{
     margin-top: 15px;
@@ -309,10 +309,3 @@ align-items: center!important;
         "foto"
         "cuando"
     }
-    .padreFlex {
-        display: flex;
-        
-    }
-}
-
-
