@@ -71,18 +71,16 @@
         <p class="respuestas">Llena este pequeño formulario y haznos saber tu pregunta, la respuesta te estara llegando
             al mail en un periodo de 24 a 72 hs.</p>
     </section>
-    <section class="padreFlex">
-        <form action="procesar.php" method="get" enctype="" id="formularioUnico">
-            <input type="text" name="Nombre" placeholder="Ingresa tu nombre">
-            <input type="text" name="apellido" placeholder="Ingresa tu apellido">
-            <input type="text" name="edad" placeholder="Ingresa tu fecha de nacimiento">
-            <input type="number" name="Dni" placeholder="Ingresa tu DNI">
-            <input type="tel" name="numero" placeholder="Ingresa tu numero de telefono">
-            <input type="email" name="email" placeholder="Ingresa tu email">
-            <textarea name="Consulta" cols="45" rows="15" placeholder="Ingresa tu consulta"></textarea>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpiar">
-        </form>
+    <section>
+      <form id="form" class="topBefore">
+        <input id="name" type="text" placeholder="Inserta tu Nombre">
+        <input id="apellido" type="text" placeholder="Inserta tu Apellido">
+        <input id="DNI" type="number" placeholder="Inserta tu DNI">
+        <input id="email" type="text" placeholder="Inserta tu E-MAIL">
+        <input id="telefono" type="tel" placeholder="Inserta tu Numero Telefonico">
+        <textarea id="Comentario" type="text" placeholder="Deja tu comentario"></textarea>
+      <input id="submit" type="submit" value="Enviar">
+      </form>
     </section>
   <hr class="hr">
   <footer class="footer">
