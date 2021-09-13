@@ -235,7 +235,7 @@ ul li:hover ul {
 }
 
 .carousel-control-prev {
-  margin-left: 10px !important;
+  margin-left: 250px !important;
 }
 
 input, textarea {
@@ -496,6 +496,7 @@ textarea:hover {
     display: flex;
     flex-direction: column;
     width: 300px;
+    margin-left: 15px;
   }
   .imagenesProductos {
     width: 280px;
@@ -519,5 +520,12 @@ textarea:hover {
   #form {
     position: relative;
     width: 300px;
+  }
+  .slider {
+    width: 300px;
+    height: 300px;
+  }
+  .combos {
+    margin-left: 0;
   }
 }
