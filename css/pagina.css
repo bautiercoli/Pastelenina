@@ -40,6 +40,8 @@ header {
 }
 
 #comboUnico {
+  margin-left: 370px;
+  margin-top: 20px;
   font-size: 30px;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -60,14 +62,6 @@ hr {
 
 #titulo {
   margin-top: 10px;
-}
-
-#formularioUnico {
-  display: flex;
-  flex-direction: column;
-  height: 450px;
-  flex-basis: 500px;
-  justify-content: space-between;
 }
 
 .padreFlex {
@@ -470,6 +464,52 @@ textarea:hover {
   transition-timing-function: linear;
 }
 
+#gridIndex {
+  display: grid;
+  justify-content: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  grid-template-columns: 25% 38%;
+  grid-template-rows: 70px 400px 70px 400px 70px 400px;
+  grid-template-areas: "tituloA tituloA" "fotoA    textoA" "tituloB tituloB" "fotoB    textoB" "tituloC tituloC" "fotoC    textoC";
+}
+
+#fotoA {
+  grid-area: fotoA;
+}
+
+#fotoB {
+  grid-area: fotoB;
+}
+
+#fotoC {
+  grid-area: fotoC;
+}
+
+#tituloA {
+  grid-area: tituloA;
+}
+
+#tituloB {
+  grid-area: tituloB;
+}
+
+#tituloC {
+  grid-area: tituloC;
+}
+
+#textoA {
+  grid-area: textoA;
+}
+
+#textoB {
+  grid-area: textoB;
+}
+
+#textoC {
+  grid-area: textoC;
+}
+
 @media screen and (min-width: 1025px) {
   .compu {
     background-color: #fdbfc9;
@@ -517,15 +557,35 @@ textarea:hover {
     justify-content: left;
     margin-right: 20px;
   }
-  #form {
-    position: relative;
-    width: 300px;
-  }
   .slider {
     width: 300px;
     height: 300px;
   }
   .combos {
     margin-left: 0;
+  }
+  #form {
+    position: relative;
+    width: 300px !important;
+    margin: 50px auto 100px auto;
+  }
+  #form .input {
+    width: 300px;
+  }
+  #form #gridIndex {
+    display: grid;
+    margin-left: 0%;
+    justify-content: normal;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 350px 300px 50px 350px 300px 50px 350px 300px;
+    grid-template-areas: "tituloA" "fotoA" "textoA" "tituloB" "fotoB" "textoB" "tituloC" "fotoC" "textoC";
+  }
+  #form #comboUnico {
+    margin-left: 5px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
   }
 }
