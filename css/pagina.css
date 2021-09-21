@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .fondo {
@@ -25,7 +26,8 @@ header {
 .respuestas {
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
-  margin-left: 30px;
+  margin: auto;
+  max-width: 700px;
 }
 
 .titulos {
@@ -40,7 +42,6 @@ header {
 }
 
 #comboUnico {
-  margin-left: 370px;
   margin-top: 20px;
   font-size: 30px;
   font-family: 'Noto Sans JP', sans-serif;
@@ -276,7 +277,7 @@ input, textarea {
   display: flex;
   flex-direction: row-reverse;
   justify-content: end;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .carousel {
@@ -464,13 +465,10 @@ textarea:hover {
   transition-timing-function: linear;
 }
 
-#gridIndex {
+.indexGrid {
   display: grid;
-  justify-content: center;
   margin-bottom: 15px;
   margin-top: 15px;
-  grid-template-columns: 25% 38%;
-  grid-template-rows: 70px 400px 70px 400px 70px 400px;
   grid-template-areas: "tituloA tituloA" "fotoA    textoA" "tituloB tituloB" "fotoB    textoB" "tituloC tituloC" "fotoC    textoC";
 }
 
@@ -510,6 +508,12 @@ textarea:hover {
   grid-area: textoC;
 }
 
+.indexImagenes {
+  width: 300px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
 @media screen and (min-width: 1025px) {
   .compu {
     background-color: #fdbfc9;
@@ -545,7 +549,6 @@ textarea:hover {
   }
   #gridNosotros {
     margin-right: 30px;
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 400px 400px 400px 500px;
     grid-template-areas: "quienesSomos" "queHacemos" "foto" "cuando";
@@ -559,7 +562,13 @@ textarea:hover {
   }
   .slider {
     width: 300px;
-    height: 300px;
+    height: 250px;
+  }
+  .indexGrid {
+    margin-left: 0%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    grid-template-areas: "tituloA" "fotoA" "textoA" "tituloB" "fotoB" "textoB" "tituloC" "fotoC" "textoC";
   }
   .combos {
     margin-left: 0;
@@ -569,23 +578,25 @@ textarea:hover {
     width: 300px !important;
     margin: 50px auto 100px auto;
   }
-  #form .input {
+  .input {
     width: 300px;
   }
-  #form #gridIndex {
-    display: grid;
-    margin-left: 0%;
-    justify-content: normal;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    grid-template-columns: 100%;
-    grid-template-rows: 50px 350px 300px 50px 350px 300px 50px 350px 300px;
-    grid-template-areas: "tituloA" "fotoA" "textoA" "tituloB" "fotoB" "textoB" "tituloC" "fotoC" "textoC";
+  .combos__titulos {
+    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    border-top: solid 2px black;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
   }
-  #form #comboUnico {
-    margin-left: 5px;
+  #comboUnico {
+    margin-left: 0;
     margin-top: 20px;
     font-size: 30px;
     font-family: 'Noto Sans JP', sans-serif;
+  }
+  .respuestas {
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
   }
 }
