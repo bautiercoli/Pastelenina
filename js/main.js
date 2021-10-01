@@ -1,3 +1,8 @@
+let nombreIngresado = prompt("Ingrese su nombre");
+console.log(nombreIngresado);
+let ingresado = "Hola" + " " + nombreIngresado + "!"
+alert(ingresado);
+
 let totalCompra = parseInt(prompt("Ingresar valor total de la compra de los productos"))
 let cantidadAmigos = parseInt(prompt("Con cuantos amigos va a realizar la compra?"))
 const sumar = (a,b) => a + b;
@@ -26,4 +31,4 @@ activoPastelenina1.push (new Pastelenina ("LetterCake", "Torta", 1400, 1));
 activoPastelenina1.push (new Pastelenina ("Brownies", "Torta", 1000, 1));
 
 const Cheesecake = activoPastelenina1.slice(1, 2);
-console.log(activoPastelenina1);
+console.log(Cheesecake);
