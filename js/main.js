@@ -1,8 +1,6 @@
-let nombreIngresado = prompt("Ingrese su nombre");
-console.log(nombreIngresado);
-let ingresado = "Hola" + " " + nombreIngresado + "!"
-alert(ingresado);
 
+// en el desafio hice como que una cantidad de amigos van a comprar en el sitio, y tienen que poner cual es el precio final y cuantos son, para que luego les diga cuanto tiene que pagar cada uno.
+const porcentaje = 0.05
 let totalCompra = parseInt(prompt("Ingresar valor total de la compra de los productos"))
 let cantidadAmigos = parseInt(prompt("Con cuantos amigos va a realizar la compra?"))
 const sumar = (a,b) => a + b;
