@@ -1,4 +1,3 @@
-
 // en el desafio hice como que una cantidad de amigos van a comprar en el sitio, y tienen que poner cual es el precio final y cuantos son, para que luego les diga cuanto tiene que pagar cada uno.
 const porcentaje = 0.05
 let totalCompra = parseInt(prompt("Ingresar valor total de la compra de los productos"))
@@ -30,3 +29,9 @@ activoPastelenina1.push (new Pastelenina ("Brownies", "Torta", 1000, 1));
 
 const Cheesecake = activoPastelenina1.slice(1, 2);
 console.log(Cheesecake);
+
+const precio = document.getElementById("precio");
+const precio2 = Precionulo;
+let precio1 = document.createElement("div");
+precio.innerHTML = `<p>El total a pagar es: ${precioFinal1}</p>`;
+usuario.appendChild(bienvenida);
