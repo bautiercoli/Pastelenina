@@ -1,16 +1,10 @@
-// en el desafio hice como que una cantidad de amigos van a comprar en el sitio, y tienen que poner cual es el precio final y cuantos son, para que luego les diga cuanto tiene que pagar cada uno.
+
 const porcentaje = 0.05
-let totalCompra = parseInt(prompt("Ingresar valor total de la compra de los productos"))
-let cantidadAmigos = parseInt(prompt("Con cuantos amigos va a realizar la compra?"))
 const sumar = (a,b) => a + b;
 const restar = (a,b) => a - b;
 const multiplicar = (a,b) => a * b;
 const dividir = (a,b) => a / b;
 const potencia = (a,b) => a ** b;
-
-let precioFinal = dividir(multiplicar(totalCompra,porcentaje),restar(1,potencia(sumar(1,porcentaje),-cantidadAmigos)));
-
-alert(`cada uno va a pagar ${Math.floor(precioFinal)} pesos cada uno`);
 
 class Pastelenina{
 constructor (Nombre, Precio, Cantidad){
@@ -30,8 +24,15 @@ activoPastelenina1.push (new Pastelenina ("Brownies", "Torta", 1000, 1));
 const Cheesecake = activoPastelenina1.slice(1, 2);
 console.log(Cheesecake);
 
-const precio = document.getElementById("precio");
-const precio2 = Precionulo;
-let precio1 = document.createElement("div");
-precio.innerHTML = `<p>El total a pagar es: ${precioFinal1}</p>`;
-usuario.appendChild(bienvenida);
+
+let input1 = document.getElementById("precio")
+let input2 = document.getElementById("amigos")
+let botonCalcular = document.getElementById("calcular") 
+
+let calculo;
+
+botonCalcular.addEventListener("click", () => {
+    calculo = dividir(input1.value, input2.value);
+    console.log (calculo.toFixed(2));
+}
+)
