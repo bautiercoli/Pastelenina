@@ -146,7 +146,8 @@ ul li:hover ul {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 350px 350px;
-  grid-template-areas: "prodA prodB    prodC" "prodD prodE    prodF";
+  grid-template-areas: "prodA prodB    prodC"
+ "prodD prodE    prodF";
 }
 
 #prodA {
@@ -182,7 +183,9 @@ ul li:hover ul {
   display: grid;
   grid-template-columns: 30% 40%;
   grid-template-rows: 250px 400px 150px;
-  grid-template-areas: "quienesSomos quienesSomos" "foto   queHacemos" "cuando  cuando";
+  grid-template-areas: "quienesSomos quienesSomos"
+ "foto   queHacemos"
+ "cuando  cuando";
 }
 
 #quienesSomos {
@@ -318,6 +321,15 @@ input, textarea {
   width: 200px;
 }
 
+.botonAñadir {
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  border-radius: 10%;
+  width: 80px;
+  margin-left: 750px;
+}
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #000000;
   font-size: 0.875em;
@@ -469,7 +481,12 @@ textarea:hover {
   display: grid;
   margin-bottom: 15px;
   margin-top: 15px;
-  grid-template-areas: "tituloA tituloA" "fotoA    textoA" "tituloB tituloB" "fotoB    textoB" "tituloC tituloC" "fotoC    textoC";
+  grid-template-areas: "tituloA tituloA"
+ "fotoA    textoA"
+ "tituloB tituloB"
+ "fotoB    textoB"
+ "tituloC tituloC"
+ "fotoC    textoC";
 }
 
 #fotoA {
@@ -551,7 +568,10 @@ textarea:hover {
     margin-right: 30px;
     grid-template-columns: 100%;
     grid-template-rows: 400px 400px 400px 500px;
-    grid-template-areas: "quienesSomos" "queHacemos" "foto" "cuando";
+    grid-template-areas: "quienesSomos"
+ "queHacemos"
+ "foto"
+ "cuando";
   }
   .imagenes {
     width: 270px;
@@ -568,7 +588,15 @@ textarea:hover {
     margin-left: 0%;
     margin-bottom: 15px;
     margin-top: 15px;
-    grid-template-areas: "tituloA" "fotoA" "textoA" "tituloB" "fotoB" "textoB" "tituloC" "fotoC" "textoC";
+    grid-template-areas: "tituloA"
+ "fotoA"
+ "textoA"
+ "tituloB"
+ "fotoB"
+ "textoB"
+ "tituloC"
+ "fotoC"
+ "textoC";
   }
   .combos {
     margin-left: 0;

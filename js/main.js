@@ -7,32 +7,36 @@ const dividir = (a,b) => a / b;
 const potencia = (a,b) => a ** b;
 
 class Pastelenina{
-constructor (Nombre, Precio, Cantidad){
-this.Nombre = Nombre;
-this.Precio = Precio;
-this.Cantidad = Cantidad;
+    constructor (id, Nombre, Precio, Cantidad){
+        this.id = id;
+        this.Nombre = Nombre;
+        this.Precio = Precio;
+        this.Cantidad = Cantidad;
     }
 }
-
+// array de objetos
 let activoPastelenina1 = [];
 
-activoPastelenina1.push (new Pastelenina ("Cheesecake", "Torta", 1200, 1));
-activoPastelenina1.push (new Pastelenina ("Cookies", "Galletitas", 900, 1));
-activoPastelenina1.push (new Pastelenina ("LetterCake", "Torta", 1400, 1));
-activoPastelenina1.push (new Pastelenina ("Brownies", "Torta", 1000, 1));
+activoPastelenina1.push (new Pastelenina (1, "Cheesecake", "Torta", 1200, 1));
+activoPastelenina1.push (new Pastelenina (2, "Cookies", "Galletitas", 900, 1));
+activoPastelenina1.push (new Pastelenina (3, "LetterCake", "Torta", 1400, 1));
+activoPastelenina1.push (new Pastelenina (4, "Brownies", "Torta", 1000, 1));
 
-const Cheesecake = activoPastelenina1.slice(1, 2);
-console.log(Cheesecake);
+function agregarCarrito(item) {
 
-
-let input1 = document.getElementById("precio")
-let input2 = document.getElementById("amigos")
-let botonCalcular = document.getElementById("calcular") 
-
-let calculo;
-
-botonCalcular.addEventListener("click", () => {
-    calculo = dividir(input1.value, input2.value);
-    console.log (calculo.toFixed(2));
+    const repeticion = element => element.id === item.id;
+    
+    if (carrito.some(repeticion)) {
+        carrito.find(itemCarrito => itemCarrito.id === item.id).Cantidad++;
+        localStorage.carrito = JSON.stringify(carrito)
+        cards()
+    }
+    else {
+        (carrito.push(item))
+        carrito.find(itemCarrito => itemCarrito.id === item.id).Cantidad++;
+    }
 }
-)
+let buenas = "asdasdasdasdasd"
+
+const anadir = document.getElementById("anadir");
+
