@@ -52,7 +52,7 @@
                         <a class="nav-link active" aria-current="page" href="contactanos.html">contactanos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="carrito.html">carrito</a>
+                            <a class="nav-link active" aria-current="page" href="#canasta">carrito</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -65,23 +65,29 @@
         </section>
         <hr class="hr">
     </header>
+    <nav class="navbar sticky-top navbar-light bg-transparent d-flex justify-content-end">
+        <div class="container-fluid navMenu d-flex justify-content-center align-items-end">
+            <div class="d-flex row justify-content-center">
+                <div class="carritoContenedor">
+                    <p id="cantidadEnElCarrito"></p>
+                </div>
+    </nav>
     <!--aca irian los productos mas destacados/mas vendidos-->
     <section class="sectionProductos">
         <h1 class="section__principal"><strong><em>Productos mas vendidos:</strong></em></h1>
-        <p class="section__preguntas"><strong><em>Letter o number cake</em></strong></p><button id="anadir" class="botonAñadir">Añadir al carrito</button>
-        <p class="section__respuestas">Esta torta puede ser pedida con forma de numeros o letra y esta hecha a base de brownie y el relleno es a eleccion(ganagge de chocolate, dulce de leche, mousse de chocolate negro o mousse de chocolate blanco) </p>
-        <img class="imagenes" src="../imagenes/lettter cake.jpg"
-        alt="letter o number cake">
-        <p class="section__preguntas"><strong><em>Macarons:</em></strong></p>
-        <p class="section__respuestas">Este producto se basa en una caja que contiene 6 macarons los cuales pueden ser de:
-        chocolate, frutos rojos, menta, lima, chocolate blanco.</p>
-        <img class="imagenes" src="../imagenes/macarons.jpg"
-        alt="macarons">
-        <p class="section__preguntas"><strong><em>Mini Cakes:</em></strong></p>
-        <p class="section__respuestas">Estas son unas minitortas las cuales pueden ser: chocotortas, frutos rojos, lemon pie, etc.</p>
-        <img class="imagenes" src="../imagenes/mini cakes.jpg"
-            alt="mini Cakes">
-    </section>
+
+    <div class="container__favoritos" id="listaDeCarrito">
+    </div>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Canasta</h5>
+            <button type="button" class="btn-close text-reset buttonaso" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <hr>
+        <div class="offcanvas-body">
+            <div id="canasta"></div>
+        </div>
+    </div>
     <hr class="hr">
     <!--aca irian el resto de los productos-->
     <section>
