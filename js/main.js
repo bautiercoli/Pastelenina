@@ -210,11 +210,7 @@ const inicializarProductos = (productoLocal) => {
 
 const comprar = () => {
     for (const producto of productos){
-        let boton = document.getElementById(`boton-${producto.id}`);     
-        boton.onclick = () => {
-            insertarCanasta(producto);
-            carritoHTML.innerHTML = elementoCarrito.cantidad;
-        } 
+        let = boton = $(`#boton-${producto.id}`).click( () => { insertarCanasta(producto); carritoHTML.html(`${elementoCarrito.cantidad}`); totalCarrito(); });
             
     }
 }
