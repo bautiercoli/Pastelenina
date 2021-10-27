@@ -229,3 +229,11 @@ if (carritoLocalStorage) {
         inicializarProductos(producto);
     }
 }
+function animaciones(){
+    $("animacionesImagenes").on("click", animar)
+    }
+function animar ({
+$("animacionesImagenes"){
+//propiedades?
+}
+})
