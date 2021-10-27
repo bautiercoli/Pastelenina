@@ -233,7 +233,6 @@ function animaciones(){
     $(".animacionesImagenes").on("click", animar)
     }
 function animar() {
-$(".animacionesImagenes");{
-//Aca iria la class que no se como poner
-}
-}
+$(".animacionesImagenes").css({
+width: "500px", heigth: "400px"
+})}
