@@ -230,10 +230,10 @@ if (carritoLocalStorage) {
     }
 }
 function animaciones(){
-    $("animacionesImagenes").on("click", animar)
+    $(".animacionesImagenes").on("click", animar)
     }
-function animar ({
-$("animacionesImagenes"){
-//propiedades?
+function animar() {
+$(".animacionesImagenes");{
+//Aca iria la class que no se como poner
 }
-})
+}
