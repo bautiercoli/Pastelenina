@@ -78,8 +78,17 @@ const eliminarProducto = (producto) => {
     }  
     }
 }
+//Funciones para hacer animaciones concatenadas
+function animaciones(){
+    $(".animacionesImagenes").on("click", animar())
+    }
+function animar() {
+$(".animacionesImagenes").css({
+width: "500px", heigth: "400px"
+})}
 
 /* 
+
 Con esta función puedo agregar productos del contenedor a la canasta 
   */
 const insertarCanasta = (producto) => {
@@ -210,7 +219,7 @@ const inicializarProductos = (productoLocal) => {
 
 const comprar = () => {
     for (const producto of productos){
-        let = boton = $(`#boton-${producto.id}`).click( () => { insertarCanasta(producto); carritoHTML.html(`${elementoCarrito.cantidad}`); totalCarrito(); });
+        let boton = $(`#boton-${producto.id}`).click( () => { insertarCanasta(producto); carritoHTML.html(`${elementoCarrito.cantidad}`); totalCarrito(); });
             
     }
 }
@@ -229,10 +238,4 @@ if (carritoLocalStorage) {
         inicializarProductos(producto);
     }
 }
-function animaciones(){
-    $(".animacionesImagenes").on("click", animar)
-    }
-function animar() {
-$(".animacionesImagenes").css({
-width: "500px", heigth: "400px"
-})}
+
