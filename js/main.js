@@ -106,6 +106,7 @@ class Carrito {
 
 //  CONSTANTES ELEMENTOS DEL DOM
 const listadoProductos = document.getElementById("listaDeCarrito");
+let contenidoProductoOtros = document.getElementById("contenidoProductoOtros")
 const precioElementos = document.getElementsByClassName("precio");
 const contenedorCanasta = document.getElementById("canasta");
 const arrayCanasta = [];
@@ -225,46 +226,58 @@ const insertarCanastaLocalStorage = (producto) => {
     Función para crear productos dinámicamente y crearlos en el contenedor 
   */
     const insertarProductos = () => {
-    for (const producto of productos) {
-    let contenidoProducto = document.createElement("div");
-    contenidoProducto.className = "row justify-content-center container__favoritos-box";
-    contenidoProducto.id = producto.id;
-
-    if (producto.id % 2 == 1 && producto.otros == false) {
-        contenidoProducto.innerHTML = `
-        <div class="col-12 col-md-6 container__favoritos-sushiDescripcion">
-            <div class="contenedorCartas">
-                <h2 class="contenedorCartas__titulo">${producto.nombre}</h2>
-                <p class="contenedorCartas__texto"> ${producto.descripcion} </p>
-                <p class="contenedorCartas__precio">$${producto.precio}</p>
-                <button class="contenedorCartas__enlace buttonaso" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="boton-${producto.id}">Comprar</button>
-            </div>
-            </div>
-        <div class="col-12 col-md-6 container__favoritos-sushiImagen">
-            <img class="container__sushiImagen-img" src="${producto.imagen}">
+        for (const producto of productos) {
+        let contenidoProducto = document.createElement("div");
+        let productosOtros = document.createElement("div")
+        contenidoProducto.className = "row justify-content-center container__favoritos-box";
+        contenidoProducto.id = producto.id;
+    
+        if (producto.id % 2 == 1 && producto.otros == false) {
+            contenidoProducto.innerHTML = `
+            <div class="col-12 col-md-6 container__favoritos-sushiDescripcion">
+                <div class="contenedorCartas">
+                    <h2 class="contenedorCartas__titulo">${producto.nombre}</h2>
+                    <p class="contenedorCartas__texto"> ${producto.descripcion} </p>
+                    <p class="contenedorCartas__precio">$${producto.precio}</p>
+                    <button class="contenedorCartas__enlace buttonaso" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="boton-${producto.id}">Comprar</button>
+                </div>
+                </div>
+            <div class="col-12 col-md-6 container__favoritos-sushiImagen">
+                <img class="container__sushiImagen-img" src="${producto.imagen}">
+                </div>
+                </div>`;
+    
+            listadoProductos.appendChild(contenidoProducto);
+        } else if(producto.otros == false){
+            contenidoProducto.innerHTML = `
+            <div class="col-12 col-md-6 container__favoritos-sushiImagen oreder-md-1 order-2">
+        <img class="container__sushiImagen-img" src="${producto.imagen}">
         </div>
-    </div>`;
-    } else {
-        contenidoProducto.innerHTML = `
-        <div class="col-12 col-md-6 container__favoritos-sushiImagen oreder-md-1 order-2">
-    <img class="container__sushiImagen-img" src="${producto.imagen}">
-    </div>
-    <div class="col-12 col-md-6 container__favoritos-sushiDescripcion order-md-2 order-1">
-    <div class="contenedorCartas">
-        <h2 class="contenedorCartas__titulo">${producto.nombre}</h2>
-        <p class="contenedorCartas__texto"> ${producto.descripcion} </p>
-        <p class="contenedorCartas__precio">$${producto.precio}</p>
-        <button class="contenedorCartas__enlace buttonaso" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="boton-${producto.id}">Comprar</button>
-    </div>
-    </div>`;    
+        <div class="col-12 col-md-6 container__favoritos-sushiDescripcion order-md-2 order-1">
+        <div class="contenedorCartas">
+            <h2 class="contenedorCartas__titulo">${producto.nombre}</h2>
+            <p class="contenedorCartas__texto"> ${producto.descripcion} </p>
+            <p class="contenedorCartas__precio">$${producto.precio}</p>
+            <button class="contenedorCartas__enlace buttonaso" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" id="boton-${producto.id}">Comprar</button>
+        </div>
+        </div>`;    
+    
+        listadoProductos.appendChild(contenidoProducto);
+        }
+        if(producto.otros == true) {
+            productosOtros.innerHTML = `
+            <div id="${producto.id}">
+                    <p><strong><em>${producto.nombre}:</em></strong></p>
+                    <p>${producto.descripcion}</p>
+                    <img class="imagenesProductos animacionesImagenes" src="${producto.imagen}"
+                    alt="Lemonies">
+                </div>
+            `;
+            
+            contenidoProductoOtros.appendChild(productosOtros)
+        }
+        }
     }
-    if(producto.id % 2 == 1 && producto.otros == true) {
-        contenidoProductoOtros.innerHTML = ``;
-    }
-    listadoProductos.appendChild(contenidoProducto);
-    }
-}
-
 const inicializarProductos = (productoLocal) => {
     for (const producto of productos){
         if (producto.id == productoLocal.id) {
