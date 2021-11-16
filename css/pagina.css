@@ -667,6 +667,45 @@ textarea:hover {
   color: #000000;
   border-radius: 5%;
 }
+.contenedor__cantidad{
+  display: flex;
+  flex-direction: row;
+}
+  .contenedor__cantidad a .contenedor__cantidad-icon {
+      font-size: 25px; 
+}
+  a .contenedor__cantidad-icon--red{
+      color: red;
+  }
+  a .contenedor__cantidad-icon--green{
+      color: green;
+  }
+  .contenedor__cantidad-numero{
+      width: 35px;
+      border: black 1px solid;
+      text-align: center;
+  }
+.buttonCanasta{
+  background-color: #f88181!important;
+  font-style: normal;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  margin-left: 200px;
+  margin-bottom: 30px;
+  border-bottom: black 2px solid;
+  border-top: black 2px solid;
+  border-right: black 2px solid;
+  border-left: black 2px solid;
+  border-radius: 5%;
+}
+.totalCanasta{
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
+.fondoCanasta{
+  background-color: #fdd5dc;
+}
 @media screen and (min-width: 1025px) {
   .compu {
     background-color: #fdbfc9;

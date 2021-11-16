@@ -294,11 +294,64 @@ const comprar = () => {
         });
     }
 }
+ /* Calculo el precio total del producto dependiendo de la cantidad */
+const precioTotal = (precio, cantidad) => {
+    return precio * cantidad
+}
 
+ /* Calculo el precio de todos los productos de la canasta */
+const totalCarrito = () => {
+    sumaTotalCarrito = 0;
+    for (const producto of productos) {
+        sumaTotalCarrito += precioTotal(producto.precio, producto.cantidad);
+    }
+
+    sumaTotalCarritoHTML.html(`$ ${sumaTotalCarrito}`);
+}
+/* Api de mercado pago */
+
+let boton = document.getElementById("pagar", JSON);
+
+boton.addEventListener("click", (e) => {
+    pagar()
+})
+
+async function pagar() {
+    const productosToMp = arrayCanasta.map(Element => {
+        let nuevoElemento = {
+        category_id: Element.id,
+        title: Element.nombre,
+        description: Element.descripcion,
+        picture_url: Element.imagen, 
+        unit_price: Number(Element.precio),
+        quantity: Number(Element.cantidad),
+        currency_id: "ARS"
+        }
+        return nuevoElemento;
+    })
+
+    const response = await fetch(
+    "https://api.mercadopago.com/checkout/preferences",
+    {
+        method: "POST",
+        headers: {
+        Authorization: 
+            "Bearer TEST-680675151110839-052307-64069089337ab3707ea2f547622a1b6a-60191006"
+        },
+        body: JSON.stringify({
+        items: productosToMp,
+        })
+    }
+);
+
+    const data = await response.json();
+    window.open(data.init_point, "_blank");
+}
   //CÓDIGO
 let carritoHTML = document.getElementById("cantidadEnElCarrito");
 let carritoParse;
-
+let sumaTotalCarrito = 0;
+let sumaTotalCarritoHTML = $("#sumaTotalCarrito");
 insertarProductos();
 comprar();
 
